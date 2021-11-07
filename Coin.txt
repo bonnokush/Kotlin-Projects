@@ -1,0 +1,16 @@
+// Coin flip with multiple instances for different valued coins using Kotlin.
+
+fun main() {
+    val my1RC = Coin(1)
+    println("My ${my1RC.rupee} rupee coin landed on ${my1RC.flip()}!")
+    val my2RC = Coin (2)
+    println("My ${my2RC.rupee} rupees coin landed on ${my2RC.flip()}!")
+    val my5RC = Coin (5)
+    println("My ${my5RC.rupee} rupees coin landed on ${my5RC.flip()}!")
+}
+
+class Coin(val rupee : Int) {
+        fun flip() : String {
+            return listOf("Heads","Tails").random()
+        }
+}
